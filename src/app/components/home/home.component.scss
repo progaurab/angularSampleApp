@@ -9,4 +9,19 @@ span {
     padding: 3em;
     border: 1px solid lightgray;
     margin-bottom: 1em;
+
+    input {
+        padding: 1em;
+        margin-bottom: 2em;
+    }
+}
+
+.active {
+    background-color: yellow;
+    border: 6px solid red;
+}
+
+.notactive {
+    background-color: lightgray;
+    border: 6px solid black;
 }

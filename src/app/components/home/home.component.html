@@ -1,0 +1,26 @@
+<h1>Welcome</h1>
+<p>When you want to communicate data from the component logic to the templete(or vice versa), this is called one-way data binding</p>
+<div class="play-container">
+    <p>You've clicked <span (click)="countClick()">THIS</span> {{clickCounter}} times</p>
+</div>
+
+<div class="play-container">
+     <p>
+         <input type="text" [(ngModel)]="name" > <br>
+         <strong>You have written: {{ name }}</strong> 
+     </p>
+</div>
+
+<!-- [style.background-color]="clickCounter > 4 ? 'yellow' : 'lightgray'" -->
+<div class="play-container" [ngStyle]="{
+    'background-color' : clickCounter > 4 ? 'yellow' : 'lightgray',
+    'border': clickCounter > 4 ? '6px solid red' : '6px solid black'
+}">
+    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+        <p>The Click counter <strong>IS GREATER</strong> then 4.</p>
+    </ng-template>
+
+    <ng-template #none>
+        <p>The Click counter <strong>IS NOT GREATER</strong> then 4.</p>
+    </ng-template>
+</div>

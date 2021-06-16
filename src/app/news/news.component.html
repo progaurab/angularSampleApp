@@ -1,0 +1,18 @@
+<!--<div *ngFor="let article of articles1.article">
+    <h2>{{article.title}}</h2>
+    <p>{{article.description}}</p>
+
+    <a href="{{article.url}}"> Read full article...</a>
+</div>
+-->
+
+<h1>News</h1>
+
+<ul *ngIf="news">
+    <li *ngFor="let new of news.articles">
+        <h2>{{new.title}}</h2>
+        <p>{{new.description}}</p>
+
+        <a href="{{new.url}}"> Read full article...</a>
+    </li>
+</ul>

@@ -30,3 +30,10 @@ this.httServices.getnews().subscribe(data => {
     })
   }
 */
+
+
+
+// npm install -g lite-server
+// ng build
+// cd dist/your-project-name 
+// lite-server
